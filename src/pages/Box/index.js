@@ -4,6 +4,7 @@ import { distanceInWords } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import Dropzone from 'react-dropzone';
 import socket from 'socket.io-client';
+import { Link } from 'react-router-dom'
 
 import { MdInsertDriveFile } from 'react-icons/md'
 
@@ -30,7 +31,7 @@ export default class Box extends Component {
 
     io.emit('connectRoom', box);
     io.on('file', data => {
-      this.setState({ box: { ... this.state.box, files: [data, ... this.state.box.files] } })
+      this.setState({ box: { ...this.state.box, files: [data, ...this.state.box.files] } })
     });
   }
 
@@ -48,7 +49,9 @@ export default class Box extends Component {
     return (
       <div id="box-container">
         <header>
-          <img src={logo} alt="" />
+          <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
           <h1>{this.state.box.title}</h1>
         </header>
 
@@ -66,7 +69,7 @@ export default class Box extends Component {
           { this.state.box.files && 
             this.state.box.files.map(file => (
             <li key={file._id}>
-              <a className="fileInfo" href={file.url} target="_blank">
+              <a className="fileInfo" href={file.url} target="_blank" rel="noopener noreferrer">
                 <MdInsertDriveFile size={24} color="#A5CFFF" />
                 <strong>{file.title}</strong>
               </a>
