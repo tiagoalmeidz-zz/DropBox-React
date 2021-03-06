@@ -16,7 +16,7 @@
 
   ![home](public/screenshots/Dropbox-home.png)
 
-  <h3 align="center">Box</h3>
+  <h3>Box</h3>
 
   ![detail](public/screenshots/Dropbox-box.png)
 </div>
