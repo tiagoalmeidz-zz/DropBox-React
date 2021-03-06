@@ -10,10 +10,13 @@
   </a>
 </p>
 
-<h3 align="center">Home</h3>
 
-![home](public/screenshots/Dropbox-home.png)
-  
-<h3 align="center">Box</h3>
+<div align="center">
+  <h3>Home</h3>
 
-![detail](public/screenshots/Dropbox-box.png)
+  ![home](public/screenshots/Dropbox-home.png)
+
+  <h3 align="center">Box</h3>
+
+  ![detail](public/screenshots/Dropbox-box.png)
+</div>
